@@ -1,3 +1,5 @@
+import "../styles/globals.scss"
+
 import { AppHead } from '@/components/common/app-head';
 import { NextPage } from 'next';
 import type { AppProps } from 'next/app'
