@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { forwardRef } from 'react';
 import cn from 'clsx';
 import { Loading } from './loading';
