@@ -123,7 +123,7 @@ export function InputForm({
           <TextArea
             id={formId}
             className='w-full min-w-0 resize-none bg-transparent text-xl outline-none
-                       placeholder:text-light-secondary dark:placeholder:text-dark-secondary'
+                       placeholder:text-light-secondary dark:placeholder:text-dark-secondary text-white'
             value={inputValue}
             placeholder={
               reply || replyModal ? 'Tweet your reply' : "What's happening?"

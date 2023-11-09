@@ -3,6 +3,7 @@ import { useState, useEffect, useRef, useId, ReactNode, ChangeEvent, FormEvent }
 import { AnimatePresence, Variants, motion } from 'framer-motion';
 import cn from 'clsx';
 import { InputForm } from './input-form';
+import { Button } from './button';
 
 type InputProps = {
     modal?: boolean;
@@ -44,16 +45,16 @@ export function Input({
 
     const handleFocus = (): void => setVisited(!loading);
 
-    const sendTweet = async():Promise<void>=>{
+    const sendTweet = async (): Promise<void> => {
         alert("send tweet")
     }
 
     const discardTweet = (): void => {
         setInputValue('');
         setVisited(false);
-    
+
         inputRef.current?.blur();
-      };
+    };
 
     return (
         <form
@@ -93,8 +94,17 @@ export function Input({
                         isValidTweet={true}
                         sendTweet={sendTweet}
                         handleFocus={handleFocus}
-                        handleChange={handleChange} 
+                        handleChange={handleChange}
                         discardTweet={discardTweet}>
+                        <Button
+                            type='submit'
+                            className='accent-tab bg-main-accent px-4 py-1.5 font-bold text-white
+                     enabled:hover:bg-main-accent/90
+                     enabled:active:bg-main-accent/75'
+                            disabled={false}
+                        >
+                            {'Tweet'}
+                        </Button>
                     </InputForm>
                 </div>
             </label>

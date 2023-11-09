@@ -17,11 +17,6 @@ type WindowContextProviderProps = {
 };
 
 export function WindowContextProvider({ children }: WindowContextProviderProps): JSX.Element {
-    if(typeof window === "undefined"){
-        return (
-            <WindowContext.Provider value={{width:1000,height:1000,isMobile:false}}>{children}</WindowContext.Provider>
-        )
-    }
     const [windowSize, setWindowSize] = useState<WindowSize>({
         width: window?.innerWidth,
         height: window?.innerHeight
